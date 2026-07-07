@@ -1,0 +1,239 @@
+{
+  "$schema": "https://nocodework.io/growth-os/tools.schema.json",
+  "growth-os": "0.1.0",
+  "description": "Machine-readable manifest of Growth OS read-side adapters. Any runtime (Claude Code, Codex, Hermes, a custom MCP host) can consume this to expose adapter commands as tools. Invocation shape: `growth-os <adapter> <command> [--flag value]`, JSON on stdout.",
+  "conventions": {
+    "invocation": "growth-os <adapter> <command> [--flag value | --flag=value | --flag]",
+    "output": "single JSON object on stdout; errors as {\"error\": str, \"kind\": str} with non-zero exit code",
+    "credentials": "always from environment variables; never passed on the command line"
+  },
+  "adapters": [
+    {
+      "name": "ga4",
+      "title": "Google Analytics 4 (Data API)",
+      "status": "implemented",
+      "access": "zero-approval",
+      "env": ["GOOGLE_APPLICATION_CREDENTIALS", "GA4_PROPERTY_ID"],
+      "doc": "docs/integrations/ga4.md",
+      "commands": [
+        {
+          "name": "overview",
+          "description": "Daily users, sessions, pageviews, engagement over the last N days.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "property_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "top_pages",
+          "description": "Highest-traffic pages by views over the last N days.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "limit", "type": "int", "default": 25},
+            {"name": "property_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "sources",
+          "description": "Acquisition channels and source/medium over the last N days.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "limit", "type": "int", "default": 25},
+            {"name": "property_id", "type": "string", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gsc",
+      "title": "Google Search Console (Search Analytics)",
+      "status": "implemented",
+      "access": "zero-approval",
+      "env": ["GOOGLE_APPLICATION_CREDENTIALS", "GSC_SITE_URL"],
+      "doc": "docs/integrations/gsc.md",
+      "commands": [
+        {
+          "name": "query",
+          "description": "Raw Search Analytics rows for arbitrary dimensions.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "dimensions", "type": "list", "default": ["query"]},
+            {"name": "limit", "type": "int", "default": 100},
+            {"name": "site_url", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "top_queries",
+          "description": "Top organic search queries by clicks.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "limit", "type": "int", "default": 50},
+            {"name": "site_url", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "top_pages",
+          "description": "Top organic landing pages by clicks.",
+          "args": [
+            {"name": "days", "type": "int", "default": 28},
+            {"name": "limit", "type": "int", "default": 50},
+            {"name": "site_url", "type": "string", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pagespeed",
+      "title": "PageSpeed Insights (Lighthouse + CrUX)",
+      "status": "implemented",
+      "access": "zero-approval",
+      "env": ["PAGESPEED_API_KEY"],
+      "doc": "docs/integrations/pagespeed.md",
+      "commands": [
+        {
+          "name": "audit",
+          "description": "Lighthouse scores + Core Web Vitals (lab and field) for a URL.",
+          "args": [
+            {"name": "url", "type": "string", "required": true},
+            {"name": "strategy", "type": "string", "default": "mobile", "enum": ["mobile", "desktop"]},
+            {"name": "key", "type": "string", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mailerlite",
+      "title": "MailerLite (email marketing)",
+      "status": "implemented",
+      "access": "zero-approval",
+      "env": ["MAILERLITE_API_KEY"],
+      "doc": "docs/integrations/mailerlite.md",
+      "commands": [
+        {
+          "name": "account",
+          "description": "Account totals (subscriber count).",
+          "args": [
+            {"name": "token", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "subscribers",
+          "description": "Recent subscribers with status and signup date.",
+          "args": [
+            {"name": "limit", "type": "int", "default": 25},
+            {"name": "token", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "campaigns",
+          "description": "Recent campaigns with opens/clicks stats.",
+          "args": [
+            {"name": "limit", "type": "int", "default": 25},
+            {"name": "token", "type": "string", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "geo",
+      "title": "Generative Engine Optimization prober",
+      "status": "partial",
+      "access": "zero-approval",
+      "env": ["GEO_PROBERS", "OPENAI_API_KEY", "ANTHROPIC_API_KEY", "PERPLEXITY_API_KEY", "GEMINI_API_KEY"],
+      "doc": "docs/integrations/geo.md",
+      "commands": [
+        {
+          "name": "generate_queries",
+          "description": "Build deterministic AI-visibility probe prompts from ICP inputs (implemented).",
+          "args": [
+            {"name": "brand", "type": "string", "required": true},
+            {"name": "category", "type": "string", "required": true},
+            {"name": "icp_role", "type": "string", "default": "founder"},
+            {"name": "icp_segment", "type": "string", "default": "small business"},
+            {"name": "job_to_be_done", "type": "string", "default": "growing my business"},
+            {"name": "competitors", "type": "list", "required": false},
+            {"name": "integration", "type": "string", "default": "your existing stack"}
+          ]
+        },
+        {
+          "name": "probe",
+          "description": "Run prompts against LLM probers and score share-of-voice (stub — needs model keys).",
+          "status": "stub",
+          "args": [
+            {"name": "brand", "type": "string", "required": true},
+            {"name": "category", "type": "string", "required": true},
+            {"name": "probers", "type": "list", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "google_ads",
+      "title": "Google Ads",
+      "status": "stub",
+      "access": "approval-gated",
+      "env": ["GOOGLE_ADS_DEVELOPER_TOKEN", "GOOGLE_ADS_CLIENT_ID", "GOOGLE_ADS_CLIENT_SECRET", "GOOGLE_ADS_REFRESH_TOKEN", "GOOGLE_ADS_LOGIN_CUSTOMER_ID", "GOOGLE_ADS_CUSTOMER_ID"],
+      "doc": "docs/integrations/google-ads.md",
+      "commands": [
+        {
+          "name": "campaigns",
+          "description": "Campaign performance for the last N days (stub — requires approval).",
+          "args": [
+            {"name": "days", "type": "int", "default": 30},
+            {"name": "customer_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "spend",
+          "description": "Total spend and efficiency for the last N days (stub — requires approval).",
+          "args": [
+            {"name": "days", "type": "int", "default": 30},
+            {"name": "customer_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "keywords",
+          "description": "Top keywords by cost (stub — requires approval).",
+          "args": [
+            {"name": "days", "type": "int", "default": 30},
+            {"name": "limit", "type": "int", "default": 50},
+            {"name": "customer_id", "type": "string", "required": false}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "meta",
+      "title": "Meta Marketing / Graph (+ Instagram)",
+      "status": "stub",
+      "access": "approval-gated",
+      "env": ["META_ACCESS_TOKEN", "META_AD_ACCOUNT_ID", "META_IG_USER_ID"],
+      "doc": "docs/integrations/meta.md",
+      "commands": [
+        {
+          "name": "ad_insights",
+          "description": "Ad-account insights for the last N days (stub — requires Business Verification + App Review).",
+          "args": [
+            {"name": "days", "type": "int", "default": 30},
+            {"name": "ad_account_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "instagram_profile",
+          "description": "Instagram business profile snapshot (stub — requires approval).",
+          "args": [
+            {"name": "ig_user_id", "type": "string", "required": false}
+          ]
+        },
+        {
+          "name": "instagram_insights",
+          "description": "Instagram account insights for the last N days (stub — requires approval).",
+          "args": [
+            {"name": "days", "type": "int", "default": 30},
+            {"name": "ig_user_id", "type": "string", "required": false}
+          ]
+        }
+      ]
+    }
+  ]
+}

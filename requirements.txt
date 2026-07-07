@@ -1,0 +1,19 @@
+# Growth OS v0.1 — read-side adapter dependencies.
+# Everything here is a well-known, first-party vendor SDK or plain HTTP client.
+# Install:  pip install -r requirements.txt
+
+# --- Google Analytics 4 (Data API) ---
+google-analytics-data>=0.18,<1.0
+
+# --- Google Search Console (Search Analytics via discovery client) ---
+google-api-python-client>=2.100,<3.0
+google-auth>=2.30,<3.0
+
+# --- Google Ads (adapter is a stub in v0.1; dependency listed for when you implement it) ---
+google-ads>=25.0,<27.0
+
+# --- MailerLite + PageSpeed Insights + Meta Graph (plain HTTPS/JSON) ---
+requests>=2.31,<3.0
+
+# --- MCP server (expose adapters as tools to any MCP host) ---
+mcp>=1.2,<2.0

@@ -1,0 +1,32 @@
+# ── Secrets & environment ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*-service-account.json
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+venv/
+.venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Logs & OS cruft ───────────────────────────────────────────────────────────
+*.log
+.DS_Store
+
+# ── Growth OS runtime output ─────────────────────────────────────────────────────
+.agents/*.local.md

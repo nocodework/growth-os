@@ -1,0 +1,66 @@
+<svg width="860" height="330" viewBox="0 0 860 330" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fd43be"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="330" fill="#1a1a2e"/>
+  <text x="430" y="42" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Getting a GA4 service-account key</text>
+  <text x="430" y="64" font-size="12" fill="#fd43be" text-anchor="middle">Zero approval · a few minutes · all self-serve</text>
+
+  <!-- Tile 1 -->
+  <g>
+    <rect x="34" y="110" width="176" height="150" rx="14" fill="#2a2440" stroke="#7c3aed" stroke-width="1.5"/>
+    <circle cx="62" cy="140" r="14" fill="url(#acc)"/>
+    <text x="62" y="145" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="52" y="180" font-size="14" font-weight="700" fill="#ffffff">Cloud</text>
+    <text x="52" y="199" font-size="14" font-weight="700" fill="#ffffff">project</text>
+    <text x="52" y="226" font-size="11.5" fill="#f4f5f6">Create one in</text>
+    <text x="52" y="243" font-size="11.5" fill="#f4f5f6">Google Cloud.</text>
+  </g>
+
+  <!-- Tile 2 -->
+  <g>
+    <rect x="242" y="110" width="176" height="150" rx="14" fill="#2a2440" stroke="#7c3aed" stroke-width="1.5"/>
+    <circle cx="270" cy="140" r="14" fill="url(#acc)"/>
+    <text x="270" y="145" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="260" y="180" font-size="14" font-weight="700" fill="#ffffff">Enable API</text>
+    <text x="260" y="207" font-size="11.5" fill="#f4f5f6">Turn on the</text>
+    <text x="260" y="224" font-size="11.5" fill="#f4f5f6">Analytics Data</text>
+    <text x="260" y="241" font-size="11.5" fill="#f4f5f6">API.</text>
+  </g>
+
+  <!-- Tile 3 -->
+  <g>
+    <rect x="450" y="110" width="176" height="150" rx="14" fill="#2a2440" stroke="#7c3aed" stroke-width="1.5"/>
+    <circle cx="478" cy="140" r="14" fill="url(#acc)"/>
+    <text x="478" y="145" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="468" y="180" font-size="14" font-weight="700" fill="#ffffff">Service</text>
+    <text x="468" y="199" font-size="14" font-weight="700" fill="#ffffff">account</text>
+    <text x="468" y="226" font-size="11.5" fill="#f4f5f6">Make one, grant</text>
+    <text x="468" y="243" font-size="11.5" fill="#f4f5f6">Viewer in GA4.</text>
+  </g>
+
+  <!-- Tile 4 -->
+  <g>
+    <rect x="658" y="110" width="176" height="150" rx="14" fill="#2a2440" stroke="url(#acc)" stroke-width="2"/>
+    <circle cx="686" cy="140" r="14" fill="url(#acc)"/>
+    <text x="686" y="145" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="676" y="180" font-size="14" font-weight="700" fill="#ffffff">JSON key</text>
+    <text x="676" y="207" font-size="11.5" fill="#f4f5f6">Download it,</text>
+    <text x="676" y="224" font-size="11.5" fill="#f4f5f6">point .env at</text>
+    <text x="676" y="241" font-size="11.5" fill="#f4f5f6">the file.</text>
+  </g>
+
+  <!-- connectors -->
+  <line x1="210" y1="185" x2="238" y2="185" stroke="#7c3aed" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="418" y1="185" x2="446" y2="185" stroke="#7c3aed" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="626" y1="185" x2="654" y2="185" stroke="#7c3aed" stroke-width="2" marker-end="url(#a2)"/>
+
+  <text x="430" y="300" font-size="12" fill="#f4f5f6" text-anchor="middle">The same service account also unlocks Google Search Console — one key, two adapters.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg width="880" height="360" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fd43be"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="360" rx="16" fill="#1a1a2e"/>
+  <text x="40" y="52" font-size="17" font-weight="700" fill="#ffffff">Getting a Meta access token</text>
+  <text x="40" y="76" font-size="12.5" fill="#fd43be">Two tiles carry a wait — Business Verification and App Review. Plan for it.</text>
+
+  <!-- Tile 1 -->
+  <g>
+    <rect x="40" y="108" width="188" height="96" rx="14" fill="#2a2440" stroke="url(#accent2)" stroke-width="1.5"/>
+    <circle cx="66" cy="134" r="12" fill="url(#accent2)"/>
+    <text x="66" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+    <text x="90" y="139" font-size="13.5" font-weight="600" fill="#ffffff">Business Suite</text>
+    <text x="60" y="166" font-size="11.5" fill="#f4f5f6">Create a Business</text>
+    <text x="60" y="184" font-size="11.5" fill="#f4f5f6">portfolio in Meta.</text>
+  </g>
+
+  <!-- Tile 2 (wait) -->
+  <g>
+    <rect x="252" y="108" width="188" height="96" rx="14" fill="#2a2440" stroke="#ffd400" stroke-width="1.8"/>
+    <circle cx="278" cy="134" r="12" fill="#ffd400"/>
+    <text x="278" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">2</text>
+    <text x="302" y="139" font-size="13.5" font-weight="600" fill="#ffffff">Verification</text>
+    <text x="272" y="166" font-size="11.5" fill="#ffd400">~14+ days wait.</text>
+    <text x="272" y="184" font-size="11.5" fill="#f4f5f6">Submit legal docs.</text>
+  </g>
+
+  <!-- Tile 3 -->
+  <g>
+    <rect x="464" y="108" width="188" height="96" rx="14" fill="#2a2440" stroke="url(#accent2)" stroke-width="1.5"/>
+    <circle cx="490" cy="134" r="12" fill="url(#accent2)"/>
+    <text x="490" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
+    <text x="514" y="139" font-size="13.5" font-weight="600" fill="#ffffff">Create app</text>
+    <text x="484" y="166" font-size="11.5" fill="#f4f5f6">Add Marketing API</text>
+    <text x="484" y="184" font-size="11.5" fill="#f4f5f6">+ Instagram, link IG.</text>
+  </g>
+
+  <!-- Tile 4 (wait) -->
+  <g>
+    <rect x="676" y="108" width="164" height="96" rx="14" fill="#2a2440" stroke="#ffd400" stroke-width="1.8"/>
+    <circle cx="702" cy="134" r="12" fill="#ffd400"/>
+    <text x="702" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a2e">4</text>
+    <text x="726" y="139" font-size="13.5" font-weight="600" fill="#ffffff">App Review</text>
+    <text x="696" y="166" font-size="11.5" fill="#ffd400">Advanced Access</text>
+    <text x="696" y="184" font-size="11.5" fill="#f4f5f6">ads_read, ig_basic.</text>
+  </g>
+
+  <!-- connectors row 1 -->
+  <line x1="228" y1="156" x2="248" y2="156" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="440" y1="156" x2="460" y2="156" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="652" y1="156" x2="672" y2="156" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- down connector to tile 5 -->
+  <path d="M758,204 L758,236 L440,236 L440,258" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Tile 5: token -->
+  <g>
+    <rect x="252" y="262" width="376" height="70" rx="14" fill="#ffffff"/>
+    <rect x="252" y="262" width="6" height="70" rx="3" fill="url(#accent2)"/>
+    <text x="282" y="292" font-size="13.5" font-weight="700" fill="#2a2440">System User token</text>
+    <text x="282" y="314" font-size="11.5" fill="#1a1a2e">Long-lived · scoped to ads_read + instagram_basic</text>
+    <text x="600" y="304" text-anchor="end" font-size="12" font-weight="600" fill="#16863d">→ .env</text>
+  </g>
+</svg>

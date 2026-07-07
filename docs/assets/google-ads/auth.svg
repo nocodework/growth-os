@@ -1,0 +1,69 @@
+<svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,sans-serif" role="img" aria-label="Steps to get Google Ads API access: account, developer token, OAuth, env">
+  <defs>
+    <linearGradient id="a2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fd43be"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="360" rx="16" fill="#1a1a2e"/>
+  <text x="40" y="52" font-size="16" font-weight="700" fill="#ffffff">How you get access</text>
+  <text x="40" y="74" font-size="12.5" fill="#9a95b5">Four tiles. The token step is the one with a queue — start it first.</text>
+
+  <!-- Tile 1 -->
+  <g>
+    <rect x="40" y="110" width="180" height="150" rx="14" fill="#2a2440" stroke="#3a3458" stroke-width="1.5"/>
+    <circle cx="70" cy="142" r="14" fill="url(#a2)"/>
+    <text x="70" y="147" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="60" y="185" font-size="13.5" font-weight="600" fill="#ffffff">Accounts</text>
+    <text x="60" y="208" font-size="11.5" fill="#c9c4dd">Google Ads +</text>
+    <text x="60" y="226" font-size="11.5" fill="#c9c4dd">Manager (MCC)</text>
+    <text x="60" y="248" font-size="11" fill="#16863d">~ minutes</text>
+  </g>
+
+  <!-- connector -->
+  <path d="M220 185 h30" stroke="url(#a2)" stroke-width="2.5" fill="none"/>
+  <path d="M250 185 l-10 -5 v10 z" fill="#7c3aed"/>
+
+  <!-- Tile 2 (highlight) -->
+  <g>
+    <rect x="252" y="110" width="180" height="150" rx="14" fill="#2a2440" stroke="url(#a2)" stroke-width="2.5"/>
+    <circle cx="282" cy="142" r="14" fill="url(#a2)"/>
+    <text x="282" y="147" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="272" y="185" font-size="13.5" font-weight="600" fill="#ffffff">Developer token</text>
+    <text x="272" y="208" font-size="11.5" fill="#c9c4dd">API Center</text>
+    <text x="272" y="226" font-size="11.5" fill="#c9c4dd">Test = instant</text>
+    <text x="272" y="248" font-size="11" fill="#ffd400">Basic/Std: 5–15+ days</text>
+  </g>
+
+  <path d="M432 185 h30" stroke="url(#a2)" stroke-width="2.5" fill="none"/>
+  <path d="M462 185 l-10 -5 v10 z" fill="#7c3aed"/>
+
+  <!-- Tile 3 -->
+  <g>
+    <rect x="464" y="110" width="180" height="150" rx="14" fill="#2a2440" stroke="#3a3458" stroke-width="1.5"/>
+    <circle cx="494" cy="142" r="14" fill="url(#a2)"/>
+    <text x="494" y="147" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="484" y="185" font-size="13.5" font-weight="600" fill="#ffffff">OAuth2</text>
+    <text x="484" y="208" font-size="11.5" fill="#c9c4dd">Client id + secret</text>
+    <text x="484" y="226" font-size="11.5" fill="#c9c4dd">Refresh token</text>
+    <text x="484" y="248" font-size="11" fill="#16863d">~ minutes</text>
+  </g>
+
+  <path d="M644 185 h30" stroke="url(#a2)" stroke-width="2.5" fill="none"/>
+  <path d="M674 185 l-10 -5 v10 z" fill="#7c3aed"/>
+
+  <!-- Tile 4 -->
+  <g>
+    <rect x="676" y="110" width="180" height="150" rx="14" fill="#2a2440" stroke="#3a3458" stroke-width="1.5"/>
+    <circle cx="706" cy="142" r="14" fill="url(#a2)"/>
+    <text x="706" y="147" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="696" y="185" font-size="13.5" font-weight="600" fill="#ffffff">Paste to .env</text>
+    <text x="696" y="208" font-size="11.5" fill="#c9c4dd">5 variables</text>
+    <text x="696" y="226" font-size="11.5" fill="#c9c4dd">Verify</text>
+    <text x="696" y="248" font-size="11" fill="#3b82f6">growth-os google-ads</text>
+  </g>
+
+  <text x="40" y="316" font-size="11.5" fill="#9a95b5">Test-access developer token reads your own accounts immediately — enough to try Growth OS today.</text>
+  <text x="40" y="336" font-size="11.5" fill="#9a95b5">Apply for Basic access in parallel so it clears while you keep working.</text>
+</svg>

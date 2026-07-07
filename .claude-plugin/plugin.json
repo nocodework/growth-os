@@ -1,0 +1,40 @@
+{
+  "name": "growth-os",
+  "description": "The open-source Growth OS for any AI agent. Point it at a business URL, extract USP/UVP/ICP into a persistent context file, run a growth audit (SEO, page speed, GEO/AI-visibility, competitors, live GA4/GSC baseline), then delegate to atomic marketing skills.",
+  "version": "0.1.0",
+  "author": {
+    "name": "NoCodeWork",
+    "url": "https://nocodework.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nocodework/growth-os",
+  "repository": "https://github.com/nocodework/growth-os",
+  "keywords": [
+    "growth",
+    "marketing",
+    "seo",
+    "geo",
+    "aeo",
+    "ai-visibility",
+    "ga4",
+    "search-console",
+    "google-ads",
+    "meta-ads",
+    "mailerlite",
+    "pagespeed",
+    "audit",
+    "agent",
+    "mcp",
+    "claude-code"
+  ],
+  "skills": [
+    "./core/skills/onboard",
+    "./core/skills/context",
+    "./core/skills/audit",
+    "./core/skills/geo-audit",
+    "./core/skills/geo-content",
+    "./core/skills/connect",
+    "./core/skills/delegate",
+    "./core/skills/dashboard"
+  ]
+}

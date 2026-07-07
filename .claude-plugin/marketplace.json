@@ -1,0 +1,14 @@
+{
+  "name": "growth-os",
+  "owner": {
+    "name": "NoCodeWork",
+    "url": "https://nocodework.io"
+  },
+  "plugins": [
+    {
+      "name": "growth-os",
+      "source": "./",
+      "description": "The open-source Growth OS for any AI agent — URL to USP/UVP/ICP, persistent marketing context, growth audit (SEO, page speed, GEO/AI-visibility, competitors, live GA4/GSC), and delegation to atomic marketing skills."
+    }
+  ]
+}

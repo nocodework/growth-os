@@ -1,0 +1,46 @@
+<svg width="900" height="240" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <linearGradient id="pa-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fd43be"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="pa-arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M1,1 L8,5 L1,9" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="240" rx="16" fill="#1a1a2e"/>
+  <text x="40" y="46" font-size="13" letter-spacing="1.5" fill="#fd43be" font-weight="600">GETTING YOUR API TOKEN</text>
+
+  <!-- Tile 1 -->
+  <rect x="40" y="78" width="150" height="96" rx="13" fill="#2a2440" stroke="#3a3358" stroke-width="1.2"/>
+  <text x="115" y="104" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="700">STEP 1</text>
+  <text x="115" y="130" text-anchor="middle" font-size="13.5" fill="#ffffff" font-weight="600">Log in</text>
+  <text x="115" y="150" text-anchor="middle" font-size="11" fill="#b9b4d4">app.mailerlite.com</text>
+
+  <line x1="196" y1="126" x2="228" y2="126" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#pa-arrow)"/>
+
+  <!-- Tile 2 -->
+  <rect x="234" y="78" width="150" height="96" rx="13" fill="#2a2440" stroke="#3a3358" stroke-width="1.2"/>
+  <text x="309" y="104" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="700">STEP 2</text>
+  <text x="309" y="130" text-anchor="middle" font-size="13.5" fill="#ffffff" font-weight="600">Integrations</text>
+  <text x="309" y="150" text-anchor="middle" font-size="11" fill="#b9b4d4">→ API tab</text>
+
+  <line x1="390" y1="126" x2="422" y2="126" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#pa-arrow)"/>
+
+  <!-- Tile 3 -->
+  <rect x="428" y="78" width="150" height="96" rx="13" fill="#2a2440" stroke="#3a3358" stroke-width="1.2"/>
+  <text x="503" y="104" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="700">STEP 3</text>
+  <text x="503" y="130" text-anchor="middle" font-size="13.5" fill="#ffffff" font-weight="600">Generate</text>
+  <text x="503" y="150" text-anchor="middle" font-size="11" fill="#b9b4d4">new token</text>
+
+  <line x1="584" y1="126" x2="616" y2="126" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#pa-arrow)"/>
+
+  <!-- Tile 4 (accent) -->
+  <rect x="622" y="78" width="238" height="96" rx="13" fill="url(#pa-accent)"/>
+  <text x="741" y="104" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="700" opacity="0.85">STEP 4</text>
+  <text x="741" y="130" text-anchor="middle" font-size="13.5" fill="#ffffff" font-weight="700">Paste into .env</text>
+  <text x="741" y="150" text-anchor="middle" font-size="11" fill="#ffffff" opacity="0.9" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">MAILERLITE_API_KEY=…</text>
+
+  <text x="40" y="212" font-size="11.5" fill="#8a89a0">The token is a Bearer secret. Treat it like a password — it lives only in your local .env, never in the repo.</text>
+</svg>

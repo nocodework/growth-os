@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Growth OS mark">
+  <title>Growth OS</title>
+  <desc>A harbour gate over water — the Growth OS mark. Gradient pink to violet.</desc>
+  <defs>
+    <linearGradient id="pm-bg" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fd43be"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="pm-sheen" x1="0" y1="0" x2="0" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rounded tile -->
+  <rect x="0" y="0" width="256" height="256" rx="56" fill="url(#pm-bg)"/>
+  <rect x="0" y="0" width="256" height="256" rx="56" fill="url(#pm-sheen)"/>
+
+  <!-- harbour gate: two pillars + round arch (the "port" you pass through) -->
+  <path d="M87 178 L87 110 A41 41 0 0 1 169 110 L169 178"
+        fill="none" stroke="#ffffff" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- water line / dock -->
+  <path d="M74 202 L182 202" fill="none" stroke="#ffffff" stroke-width="14"
+        stroke-linecap="round" opacity="0.92"/>
+</svg>

@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "growth-os"
+version = "0.1.0"
+description = "The open-source Growth OS for any AI agent — read-side marketing/analytics adapters."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NoCodeWork", email = "hello@nocodework.io" }]
+keywords = [
+    "growth",
+    "marketing",
+    "analytics",
+    "seo",
+    "geo",
+    "ai-agents",
+    "mcp",
+    "ga4",
+    "search-console",
+    "growth-os",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+]
+
+dependencies = [
+    "google-analytics-data>=0.18,<1.0",
+    "google-api-python-client>=2.100,<3.0",
+    "google-auth>=2.30,<3.0",
+    "requests>=2.31,<3.0",
+]
+
+[project.optional-dependencies]
+# Google Ads read access is approval-gated; install only when you implement it.
+ads = ["google-ads>=25.0,<27.0"]
+# MCP server to expose adapters as tools to any MCP host.
+mcp = ["mcp>=1.2,<2.0"]
+# Everything.
+all = [
+    "google-ads>=25.0,<27.0",
+    "mcp>=1.2,<2.0",
+]
+
+[project.urls]
+Homepage = "https://nocodework.io"
+Repository = "https://github.com/nocodework/growth-os"
+Issues = "https://github.com/nocodework/growth-os/issues"
+
+[project.scripts]
+growth-os = "adapters.cli:main"
+growth-os-mcp = "mcp.server:main"
+
+[tool.setuptools]
+packages = ["adapters", "mcp"]
+
+[tool.setuptools.package-data]
+adapters = ["tools.json"]
