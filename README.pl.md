@@ -254,6 +254,7 @@ Uczciwie — Growth OS nie jest dla każdego i nie udaje, że jest.
 Growth OS jest jednym z otwartych narzędzi budowanych w [NoCodeWork](https://nocodework.io). Reszta:
 
 - **[ai-context-kit](https://github.com/nocodework/ai-context-kit)** — startowy zestaw plików kontekstu dla agentów AI.
+- **[ai-adoption-kit](https://github.com/nocodework/ai-adoption-kit)** — wdrożenie AI w firmie w 90 dni: plan wdrożenia, mapa procesów i polityka AI.
 - **[offline-notes](https://github.com/nocodework/offline-notes)** — edytor notatek Markdown, zero żądań sieciowych.
 - **[offline-sketch](https://github.com/nocodework/offline-sketch)** — szkicownik z obsługą nacisku rysika, w pełni offline.
 - **[offline-whiteboard](https://github.com/nocodework/offline-whiteboard)** — tablica do burzy mózgów, zero telemetrii.
