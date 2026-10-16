@@ -185,6 +185,7 @@ If you need enterprise BI plumbing, buy Supermetrics. If you want an owned, hack
 Growth OS is one of a small set of open, self-contained tools we build at [NoCodeWork](https://nocodework.io):
 
 - [ai-context-kit](https://github.com/nocodework/ai-context-kit) — give any AI agent durable project context
+- [ai-adoption-kit](https://github.com/nocodework/ai-adoption-kit) — roll out AI in a company in 90 days: rollout plan, process map, AI policy (Polish)
 - [offline-notes](https://github.com/nocodework/offline-notes) — a markdown notes editor that makes zero network requests
 - [offline-sketch](https://github.com/nocodework/offline-sketch) — a pressure-sensitive sketchpad, fully offline
 - [offline-whiteboard](https://github.com/nocodework/offline-whiteboard) — an infinite whiteboard that never phones home
